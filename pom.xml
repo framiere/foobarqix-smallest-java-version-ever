@@ -21,12 +21,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.carrotsearch</groupId>
-			<artifactId>junit-benchmarks</artifactId>
-			<version>0.3.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>chuck</groupId>
 			<artifactId>norris</artifactId>
 			<version>666</version>
@@ -53,41 +47,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>remove-magic</id>
-			<build>
-				<defaultGoal>generate-sources</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>org.projectlombok</groupId>
-						<artifactId>lombok-maven-plugin</artifactId>
-						<version>0.10.2.0</version>
-						<dependencies>
-							<dependency>
-								<groupId>chuck</groupId>
-								<artifactId>norris</artifactId>
-								<version>666</version>
-								<scope>system</scope>
-								<systemPath>${basedir}/src/lib/chucknorris.jar</systemPath>
-							</dependency>
-						</dependencies>
-						<executions>
-							<execution>
-								<id>delombok</id>
-								<phase>generate-sources</phase>
-								<goals>
-									<goal>delombok</goal>
-								</goals>
-								<configuration>
-									<verbose>true</verbose>
-									<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
