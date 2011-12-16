@@ -7,3 +7,13 @@
 # Other entries
 
 https://github.com/framiere/FooBarQix/
+
+# Execute 
+
+``` code
+$ git clone https://github.com/framiere/foobarqix-smallest-java-version-ever.git
+$ cd foobarqix-smallest-java-version-ever
+$ mvn test
+```
+
+This will execute the assignment, and run the unit tests at the same time.
